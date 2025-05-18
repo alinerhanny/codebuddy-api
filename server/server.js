@@ -5,7 +5,9 @@ require('dotenv').config();
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://alinerhanny.github.io'
+}));
 app.use(express.json());
 
 // Inicializa a API Gemini com sua chave
